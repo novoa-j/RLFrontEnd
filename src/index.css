@@ -1,0 +1,90 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --panel: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #a8ed4f;
+  --accent-bg: rgba(168, 237, 79, 0.12);
+  --accent-border: rgba(168, 237, 79, 0.6);
+  /* Darker lime for accent-colored TEXT: #a8ed4f itself is too faint on a
+     light background (≈1.6:1); this keeps ≥4.5:1 while staying in the family. */
+  --accent-text: #4a7716;
+  --danger: #d3403b;
+  --danger-bg: rgba(211, 64, 59, 0.1);
+  --ok: #1a9c62;
+  --ok-bg: rgba(26, 156, 98, 0.12);
+  --warn: #c98a00;
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/145% var(--sans);
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --panel: #1c1d25;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #a8ed4f;
+    --accent-bg: rgba(168, 237, 79, 0.15);
+    --accent-border: rgba(168, 237, 79, 0.5);
+    --accent-text: #a8ed4f; /* bright lime reads fine on dark backgrounds */
+    --danger: #f87171;
+    --danger-bg: rgba(248, 113, 113, 0.15);
+    --ok: #34d399;
+    --ok-bg: rgba(52, 211, 153, 0.15);
+    --warn: #fbbf24;
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+p {
+  margin: 0;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--code-bg);
+  color: var(--text-h);
+}
